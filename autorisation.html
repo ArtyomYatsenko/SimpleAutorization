@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{if .Succes}}
+    <div class="cabinet-container-text">
+
+        <h1 class="cabinet-text" id="cabinet-text" style="">Авторизация успешно выполнена</h1>
+        <h3> {{.StorageAcces}}</h3>
+      </div>
+    
+    {{else}}
+    <div class="cabinet-container-text">
+
+      <h1 class="cabinet-text" id="cabinet-text" style="">Вход в личный кабинет</h1>
+
+    </div>
+
+    <div class="registration-cssave">
+
+      <form action="cabinet.php" method="POST">
+
+        <div class="form-group">
+          <p><strong id="login">Логин</strong>
+          <p>
+            <input name="login" value="" class="" type="text" name="username"
+              maxlength="30" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="" required>
+        </div>
+        <div class="form-group">
+          <p id="passowrd"><strong>Пароль</strong>
+          <p>
+            <input name="password" type="password" class="" placeholder="" required>
+        </div>
+
+        <div class="form-group">
+          <button name="do_login" type="submit" class="button-log"><strong id="button">Войти</strong></button>
+        </div>
+      </form>
+
+    </div>
+    {{end}}
+</body>
+</html>
