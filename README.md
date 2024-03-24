@@ -1,0 +1,1 @@
+Simple autorization for golang
